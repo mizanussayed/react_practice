@@ -66,6 +66,4 @@ export class PostService {
         return this.storage.getFilePreview(conf.bucketId, fileId)
     }
 }
-const postService = new PostService()
-
-export default postService;
+export const postService = new PostService()

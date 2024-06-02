@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { authService } from '../appwrite/auth-service'
 import { useDispatch } from 'react-redux'
 import { login } from '../store/auth-slice'
-import { Input, Logo } from './index'
+import { Input, Logo, Button } from './index'
 
 const SignUp = () => {
     const navigate = useNavigate
     const [error, setError] = useState("")
-    const [register, handleSubmit] = useForm()
+    const {register, handleSubmit} = useForm()
     const dispatch = useDispatch()
-    const signUp = async (data) => {
+    const create = async (data) => {
         const createdUser = await authService.createAccount(data);
         if (createdUser) dispatch(login(data))
     }
