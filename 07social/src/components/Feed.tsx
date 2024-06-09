@@ -1,11 +1,17 @@
-import { Box } from "@mui/material"
-import { yellow } from "@mui/material/colors"
+
+import { Box} from "@mui/material"
+import Posts from "./Posts"
+
 
 
 const Feed = () => {
+
     return (
-        <Box flex={4} p={2} bgcolor={yellow}>
-            Feed
+        <Box flex={5} p={2}>
+            <Posts />
+            <Posts />
+            <Posts />
+            <Posts />
         </Box>
     )
 }
