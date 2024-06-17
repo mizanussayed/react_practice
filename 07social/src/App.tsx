@@ -6,13 +6,12 @@ import Navbar from "./components/Navbar"
 import { Add } from "./components/Add"
 import { useState } from "react"
 
-
 function App() {
   const [mode, setMode] = useState("dark")
 
   const darkTheme = createTheme({
     palette: {
-      mode: mode,
+      mode:mode
     }
   })
 

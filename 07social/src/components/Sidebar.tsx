@@ -1,8 +1,12 @@
 import { AccountBox, Feed, Group, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material"
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material"
 
+type themeMode = {
+    mode : string, 
+    setMode(mode: string): void,
+}
 
-const Sidebar = ({setMode, mode}) => {
+const Sidebar = ({setMode, mode}: themeMode) => {
     return (
         <Box
             flex={1}
